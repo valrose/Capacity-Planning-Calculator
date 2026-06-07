@@ -2,7 +2,7 @@
 
 ## Purpose 
 
-Calculate avaliable workforce capacity and compare against current demand. 
+Calculate avaliable workforce capacity and compare against projected demand. 
 
 ## Assumptions 
 
@@ -12,27 +12,61 @@ Calculate avaliable workforce capacity and compare against current demand.
 
 ## Inputs 
 
+- Standard weekly capacity
+- Allocated hours per employee
 - Number of employees
-- Hours each employee works/per week
-- Number of projects 
-- Number of project hours 
+- New project demand
 
 ## Process
 
-1. Ask how many employees are on the team.
-2. Ask for each employee's available weekly hours.
-3. Add those hours together to calculate total team capacity.
-4. Ask for total project demand across all active projects.
-5. Compare demand against total team capacity.
-6. Calculate utilization percentage.
-7. Calculate remaining capacity or capacity gap.
-8. Display whether the team is under capacity, near capacity, or over capacity.
+1. Ask for standard weekly capacity
+2. Ask for number of employees
+3. Calculate total maximum capacity
+4. Ask for current allocated hours per employee
+4. Calculate available capacity per employee
+5. Sum total team allocated hours
+6. Sum team available capacity
+6. Ask for new project demand hours
+7. Calculate gap
+8. Calculate utilization
+9. Display total number of employees
+10. Display team available capacity
+11. Display new project demand hours
+12. Display gap
+13. Display utilization
+14. Display status: Healthy, At Risk, or Over Capacity
 
 ## Outputs 
 
 - utilization %
-- remaining capacity
+- status/team health 
 - gap/surplus
+
+## Definitions
+
+### Capacity
+
+Total available workforce hours.
+
+Calculated as the sum of all employee hours entered by the user.
+
+### Demand
+
+Total project hours required.
+
+Entered by the user.
+
+### Capacity Gap
+
+Capacity minus demand.
+
+Positive values indicate available capacity.
+
+Negative values indicate a shortage of capacity.
+
+### Utilization Rate
+
+The percentage of available workforce capacity required to meet current demand.
 
 ## Future Enhancements 
 
